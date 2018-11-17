@@ -1,0 +1,30 @@
+package com.example.lenovo.bomberman.components.power;
+
+import com.example.lenovo.bomberman.components.BomberMan;
+import com.example.lenovo.bomberman.components.cell.Cell;
+import com.example.lenovo.bomberman.UI.Images;
+
+import java.io.PrintStream;
+
+public class BombDecreaser extends PowerChanger {
+
+    public BombDecreaser(Cell currentCell) {
+        super(currentCell);
+      image= Images.bombDecrease;
+
+    }
+
+    @Override
+    public void doJob(BomberMan bomberMan) {
+        if(bomberMan.getBombLimit()>1)
+        bomberMan.decreaseBombLimit();
+        currentCell.removeInsideObj(this);
+    }
+
+    @Override
+    public void save(PrintStream printStream, int cellIndex) {
+        printStream.print(getClass().getCanonicalName()+" "+cellIndex+" ");
+    }
+
+
+}
