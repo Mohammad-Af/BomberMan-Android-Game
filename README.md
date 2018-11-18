@@ -4,7 +4,7 @@ A bomberman is going to plant bombs and get to the liberty :)
 
 ## Getting Started
 
-Clone the project and run it 
+Clone the project and run it <br/>
 Then enjoy the awesome game.
 
 ## Authors
